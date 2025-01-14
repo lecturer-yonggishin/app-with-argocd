@@ -10,7 +10,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-
+      with:
+        repository: https://github.com/lecturer-yonggishin/app-with-argocd
+        token: ${{ secrets.TOKEN }}
+        
     - name: Set up Image
       run: |
-        sed -i "s%image: nginx:1.25%image: nginx:latest%" ./argocd-deployment.yaml
+        sed -i "s%image: nginx:1.25%image: nginx:latest%" /argocd-deployment.yaml
