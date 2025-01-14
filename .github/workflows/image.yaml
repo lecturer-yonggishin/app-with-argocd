@@ -1,0 +1,16 @@
+name: App With Github Actions with Docker CI/CD
+
+on:
+  # workflow_dispatch
+  push
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Image
+      run: |
+        sed -i "s%image: nginx:1.25 %image: nginx:latest" /argocd-deployment.yaml
