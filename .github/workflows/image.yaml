@@ -18,3 +18,11 @@ jobs:
     - name: Set up Image
       run: |
         sed -i "s%image: nginx:1.25%image: nginx:latest%" ./argocd-deployment.yaml
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "lecturer.yonggishin@github.com"
+        git config --local user.name "lecturer-yonggishin"
+        git add deployment.yaml
+        git commit -m "Update nginx image to latest"
+        git push
