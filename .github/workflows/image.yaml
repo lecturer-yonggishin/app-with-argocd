@@ -21,7 +21,7 @@ jobs:
         
     - name: Commit and push changes
       run: |
-        git config --local user.email "lecturer.yonggishin@github.com"
+        git config --local user.email "lecturer.yonggishin@gmail.com"
         git config --local user.name "lecturer-yonggishin"
         git add deployment.yaml
         git commit -m "Update nginx image to latest"
