@@ -23,6 +23,6 @@ jobs:
       run: |
         git config --local user.email "lecturer.yonggishin@gmail.com"
         git config --local user.name "lecturer-yonggishin"
-        git add deployment.yaml
+        git add .
         git commit -m "Update nginx image to latest"
         git push
