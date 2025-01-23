@@ -80,8 +80,8 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config --local user.email "test"
-        git config --local user.name "test"
+        git config --local user.email "lecturer.yonggishin@gmail.com"
+        git config --local user.name "lectuer-yonggishin"
         git add .
         git commit -m "Update application image version for ArgoCD"
         git push
